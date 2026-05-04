@@ -282,8 +282,8 @@ def getDevice(ap_name):
         "location_id": data['location_id'],
         "x": data['x'],
         "y": data['y'],
-        "latitude": data['latitude'],
-        "longitude": data['longitude']
+        "latitude": data.get('latitude',"null"),
+        "longitude": data.get('longitude',"null")
     }
     return ap_id, ap_data[ap_id]
     
